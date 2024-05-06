@@ -6,7 +6,7 @@ const editBtnHandler = async (event) => {
       method: 'GET'
     })
     if (!response.ok){
-      console.log('ERROR GG')
+      console.log('ERROR LOL')
       return;
     }
 

@@ -1,9 +1,9 @@
-const User = require('./user');
-const Post = require('./post');
+const User = require('./user.js');
+const Post = require('./post.js');
 const Comment = require('./comments.js');
 
 User.hasMany(Post, 
-  { foreignKey: 'userId'});
+    { foreignKey: 'userId'});
 Post.belongsTo(User, { foreignKey: 'userId' });
 
 User.hasMany(Comment, { foreignKey: 'userId' });
