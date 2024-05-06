@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
-/* General body styling */
+
 body {
-    background-color: #0a0a0a; /* Dark background */
-    color: #3368FF; /* Bright green text, typical of hacker themes */
-    font-family: 'JetBrains Mono', monospace; /* Monospaced font */
+    background-color: #0a0a0a;
+    color: #3368FF; 
+    font-family: 'JetBrains Mono', monospace; 
 
 }
 header, footer {
@@ -18,10 +18,9 @@ header, footer {
 }
 
 
-/* Link styling */
 a {
     font-size: 12px;
-    color: #3393FF; /* Slightly different green for links */
+    color: #3393FF; 
     text-decoration: none;
 }
 
@@ -30,7 +29,6 @@ nav a:hover {
     font-size: 18px;
 }
 
-/* Navigation styling */
 nav ul{
     list-style: none;
 }
