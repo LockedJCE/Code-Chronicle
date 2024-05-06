@@ -2,7 +2,7 @@ document.getElementById('comment-form').addEventListener('submit', async functio
     event.preventDefault();
   
     const content = document.querySelector('textarea[name="content"]').value;
-    const bpostId = document.querySelector('input[name="postId"]').value;
+    const postId = document.querySelector('input[name="postId"]').value;
   
     const response = await fetch('/api/comments/new', {
       method: 'POST',
