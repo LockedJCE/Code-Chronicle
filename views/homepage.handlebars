@@ -1,16 +1,11 @@
 <!-- Loop over each object in the projects array -->
-{{#each bposts as |bpost| }}
-<div class="row mb-4 bpost">
-  <div class="col-md-5">
-    <h2>
-      <a href="/bpost/{{bpost.id}}">{{bpost.title}}</a>
-    </h2>
-    <p>Created by {{bpost.user.name}} on {{format_date bpost.date_created}}</p>
-  </div>
-  <div class="col-md-7">
-    <p>
-      {{bpost.content}}
-    </p>
-  </div>
-</div>
+{{#each posts}}
+    <div class="post">
+        <h2>{{this.title}}</h2>
+        <p>{{this.content}}</p>
+        <small>Posted by {{this.user.username}} on {{this.date_created}}</small>
+    </div>
+    <button><a href="/viewpost/{{this.id}}">VIEW</a></button>
+{{else}}
+    <p>No posts found.</p>
 {{/each}}

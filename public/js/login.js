@@ -1,7 +1,6 @@
 const loginFormHandler = async (event) => {
     event.preventDefault();
   
-    
     const email = document.querySelector('#email-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
   
@@ -13,9 +12,10 @@ const loginFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/profile');
+        console.log('GOOD JOB!')
+        document.location.replace('/dashboard');
       } else {
-        alert(response.statusText);
+        alert('UH OH!!!', response.statusText);
       }
     }
   };
@@ -35,7 +35,7 @@ const loginFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/profile');
+        document.location.replace('/dashboard');
       } else {
         alert(response.statusText);
       }
