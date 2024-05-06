@@ -17,7 +17,7 @@ const posts = await Post.bulkCreate(postData)
 console.log(posts);
 
 await Comment.bulkCreate(commentsData)
-console.log("COMMENT MADE");
+console.log("COMMENT UPLOADED");
 
   process.exit(0);
 };
