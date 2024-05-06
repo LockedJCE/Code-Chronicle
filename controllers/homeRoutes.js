@@ -12,10 +12,10 @@ router.get('/', async (req, res) => {
           include: [
               {
                   model: User,
-                  attributes: ['username'],
+                  attributes: ['name'],
               },
           ],
-          order: [['date_created', 'DESC']],  // Orders the posts by creation time in descending order
+          order: [['createdAt', 'DESC']],  // Orders the posts by creation time in descending order
       });
 
       const posts = postData.map(post => post.get({ plain: true }));
