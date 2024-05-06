@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const express = require('express');
 const { Post, User, Comment } = require('../models');
 
 // GET homepage
@@ -15,7 +16,7 @@ router.get('/', async (req, res) => {
                   attributes: ['name'],
               },
           ],
-          order: [['createdAt', 'DESC']],  // Orders the posts by creation time in descending order
+          order: [['createdAt', 'DESC']],
       });
 
       const posts = postData.map(post => post.get({ plain: true }));
@@ -84,7 +85,6 @@ router.get('/viewpost/:id', async (req, res) => {
 
 
 router.get('/login', (req, res) => {
-  // If the user is already logged in, redirect the request to another route
   if (req.session.loggedIn) {
     res.redirect('/dashboard');
     return;
