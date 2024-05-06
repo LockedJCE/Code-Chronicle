@@ -13,7 +13,7 @@ router.post('/new', async (req, res) => {
         const newComment = await Comment.create({
             content: req.body.content,
             userId: req.session.userId, 
-            bpostId: req.body.bostId,
+            postId: req.body.postId,
         });
         res.status(201).json(newComment);
     } catch (error) {

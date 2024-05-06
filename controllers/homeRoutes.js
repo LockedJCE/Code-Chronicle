@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
                   attributes: ['username'],
               },
           ],
-          order: [['createdAt', 'DESC']],  // Orders the posts by creation time in descending order
+          order: [['date_created', 'DESC']],  // Orders the posts by creation time in descending order
       });
 
       const posts = postData.map(post => post.get({ plain: true }));
@@ -40,7 +40,7 @@ router.get('/dashboard', async (req, res) => {
           include: [User]
       });
 
-      const posts = userPostsData.map(post => post.get({ plain: true }));
+      const posts = userPostData.map(post => post.get({ plain: true }));
 
       res.render('dashboard', { posts, loggedIn: req.session.loggedIn });
   } catch (error) {
